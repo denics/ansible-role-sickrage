@@ -1,15 +1,13 @@
 ---
-# defaults file for sickbeard
+# defaults file for sickrage
+sickrage_enabled: yes
+
+sickrage_path: /srv/sickrage
+
+sickrage_repo: https://git.sickrage.ca/SiCKRAGE/sickrage.git
+sickrage_branch: master
+
+sickrage_api_key: 
 
 # Helper vaiable. In use by other roles
-sickbeard_enabled: yes
-
-sickbeard_path: /opt/sickrage
-
-sickbeard_repo: https://github.com/SickRage/SickRage.git
-sickbeard_branch: master
-
-sickbeard_api_key: 9d9af7ab6548948fcdc2db864ecd2588
-
-# Helper vaiable. In use by other roles
-sickbeard_host: "{{ ansible_default_ipv4.address }}"
+sickrage_host: "{{ ansible_default_ipv4.address }}"
