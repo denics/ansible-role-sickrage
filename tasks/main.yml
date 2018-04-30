@@ -6,7 +6,7 @@
   with_items:
     - git
     - python-cheetah 
-    - unrar 
+    - unrar-free
     - wget 
     - python-pip 
     - libxslt1.1 
