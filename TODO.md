@@ -1,0 +1,2 @@
+- setup config.ini
+- add config.ini to templates

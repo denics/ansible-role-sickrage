@@ -23,14 +23,15 @@
 - name: Make sure SSL is available for python
   pip:
     name: pyopenssl
+
 - name: Install specified python requirements
   pip: 
     requirements: "{{ sickrage_path }}/requirements.txt"
   become: yes
-  become_user: "{{ htpc_user_username }}"
+  tags: sickrage-req
 
 - name: Update SickRage Upstart script
-  template: src=etc_systemd_sickrage.conf.j2 dest=/etc/systemd/system/sickrage.service owner=root group=root
+  template: src=sickrage.service.j2 dest=/etc/systemd/system/sickrage.service owner=root group=root
 
 - name: Enable and Start SickBeard
-  service: name=sickrage state=started enabled=yes
+  systemd: name=sickrage state=started daemon_reload=yes

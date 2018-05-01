@@ -29,7 +29,6 @@ Description=SickRage Daemon
 [Service]
 User={{ htpc_user_username }}
 Group={{ htpc_user_group }}
-
 Type=forking
 GuessMainPID=no
 ExecStart=/usr/bin/python2.7  {{ sickrage_path }}/SiCKRAGE.py -q --daemon --nolaunch --datadir=/var/lib/sickrage
